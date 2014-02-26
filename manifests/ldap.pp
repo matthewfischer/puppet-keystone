@@ -81,7 +81,7 @@ class keystone::ldap(
     'ldap/group_allow_create':        value => $group_allow_create;
     'ldap/group_allow_update':        value => $group_allow_update;
     'ldap/group_allow_delete':        value => $group_allow_delete;
-    'idenity/driver':                 value => $identity_driver;
+    'identity/driver':                value => $identity_driver;
     'assignment/driver':              value => $assignment_driver;
   }
 }
