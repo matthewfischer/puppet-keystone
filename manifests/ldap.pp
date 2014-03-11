@@ -92,7 +92,7 @@ class keystone::ldap(
   keystone_config {
     'ldap/url':                                 value => $url;
     'ldap/user':                                value => $user;
-    'ldap/password':                            value => $password, secret => true;
+    'ldap/password':                            value => $password;
     'ldap/suffix':                              value => $suffix;
     'ldap/query_scope':                         value => $query_scope;
     'ldap/page_size':                           value => $page_size;
