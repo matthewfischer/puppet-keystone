@@ -119,7 +119,9 @@ Puppet::Type.type(:keystone_user).provide(
   end
 
   def tenant=(value)
-    fail("tenant cannot be updated. Transition requested: #{user_hash[resource[:name]][:tenant]} -> #{value}")
+    # Change to warning
+    warn("tenant cannot be updated. Transition requested: #{user_hash[resource[:name]][:tenant]} -> #{value}")
+    #fail("tenant cannot be updated. Transition requested: #{user_hash[resource[:name]][:tenant]} -> #{value}")
   end
 
   def email
