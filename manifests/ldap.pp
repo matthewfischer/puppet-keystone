@@ -89,6 +89,25 @@ class keystone::ldap(
       ensure => present,
   }
 
+  # check for some common driver name mistakes
+  if ($assignment_driver != undef) {
+      if ! ($assignment_driver =~ /^keystone.assignment.backends.*Assignment$/) {
+          fail("assigment driver should be of the form 'keystone.assignment.backends.*Assignment'")
+      }
+  }
+
+  if ($identity_driver != undef) {
+      if ! ($identity_driver =~ /^keystone.identity.backends.*Identity$/) {
+          fail("identity driver should be of the form 'keystone.identity.backends.*Identity'")
+      }
+  }
+
+  if ($tls_cacertdir != undef) {
+    file { $tls_cacertdir:
+      ensure => directory
+    }
+  }
+  
   keystone_config {
     'ldap/url':                                 value => $url;
     'ldap/user':                                value => $user;
