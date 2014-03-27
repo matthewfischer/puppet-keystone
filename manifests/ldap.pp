@@ -122,10 +122,10 @@ class keystone::ldap(
     'ldap/user_name_attribute':                 value => $user_name_attribute;
     'ldap/user_mail_attribute':                 value => $user_mail_attribute;
     'ldap/user_enabled_attribute':              value => $user_enabled_attribute;
-    'ldap/user_enabled_mask':                   value => $user_enabled_attribute;
-    'ldap/user_enabled_default':                value => $user_enabled_attribute;
-    'ldap/user_attribute_ignore':               value => $user_enabled_attribute;
-    'ldap/user_default_project_id_attribute':   value => $user_enabled_attribute;
+    'ldap/user_enabled_mask':                   value => $user_enabled_mask;
+    'ldap/user_enabled_default':                value => $user_enabled_default;
+    'ldap/user_attribute_ignore':               value => $user_attribute_ignore;
+    'ldap/user_default_project_id_attribute':   value => $user_default_project_id_attribute;
     'ldap/user_allow_create':                   value => $user_allow_create;
     'ldap/user_allow_update':                   value => $user_allow_update;
     'ldap/user_allow_delete':                   value => $user_allow_delete;
